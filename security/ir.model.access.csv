@@ -1,2 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_manageerik_manageerik,manageerik.manageerik,model_manageerik_manageerik,base.group_user,1,1,1,1
+access_manageerik_history,manageerik.history,model_manageerik_history,base.group_user,1,1,1,1
+access_manageerik_project,manageerik.project,model_manageerik_project,base.group_user,1,1,1,1
+access_manageerik_sprint,manageerik.sprint,model_manageerik_sprint,base.group_user,1,1,1,1
+access_manageerik_task,manageerik.task,model_manageerik_task,base.group_user,1,1,1,1
+access_manageerik_technology,manageerik.technology,model_manageerik_technology,base.group_user,1,1,1,1

@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="manageerik_technology_form">
+            <field name="name">Technology Form</field>
+            <field name="model">manageerik.technology</field>
+            <field name="arch" type="xml">
+                <form string="Technology Form">
+                    <sheet>
+                        <group name="groupTop">
+                            <group name="groupLeft">
+                                <field name="name" />
+                                <field name="description" />
+                            </group>
+                            <group name="groupRight">
+                                <field name="image" widget="image"/>
+                                <field name="tasks"/>
+                            </group>
+
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="manageerik_technology_tree">
+            <field name="name">Technology View</field>
+            <field name="model">manageerik.technology</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="image" widget="image"/>
+                    <field name="tasks"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_manageerik_technology_form">
+            <field name="name">Technology List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">manageerik.technology</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Technology
+                </p>
+                <p> Click <strong> 'Create' </strong> to add new technologies </p>
+            </field>
+        </record>
+    </data>
+
+    <menuitem name="Management" id="menu_manageerik_root"/>
+    <menuitem name="Project Management" id="menu_manageerik_manage_list" parent="menu_manageerik_root"/>
+    <menuitem name="Projects" id="menu_manageerik_project" parent="menu_manageerik_manage_list" action="action_manageerik_project_form"/>
+    <menuitem name="Sprints" id="menu_manageerik_sprint" parent="menu_manageerik_manage_list" action="action_manageerik_sprint_form"/>
+    <menuitem name="Tasks" id="menu_manageerik_task" parent="menu_manageerik_manage_list" action="action_manageerik_task_form"/>
+    <menuitem name="Histories" id="menu_manageerik_history" parent="menu_manageerik_manage_list" action="action_manageerik_history_form"/>
+    <menuitem name="Technologies" id="menu_manageerik_technology" parent="menu_manageerik_manage_list" action="action_manageerik_technology_form"/>
+
+</odoo>

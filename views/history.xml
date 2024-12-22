@@ -1,1 +1,46 @@
-<odoo/>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="manageerik_history_form">
+            <field name="name">History Form</field>
+            <field name="model">manageerik.history</field>
+            <field name="arch" type="xml">
+                <form string="History Form">
+                    <sheet>
+                        <group name="groupTop">
+                            <field name="name" />
+                            <field name="description" />
+                            <field name="project" />
+                            <field name="tasks"/>
+                            <field name="used_technologies"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="manageerik_history_tree">
+            <field name="name">History View</field>
+            <field name="model">manageerik.history</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                    <field name="project" />
+                    <field name="tasks"/>
+                    <field name="used_technologies"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_manageerik_history_form">
+            <field name="name">History List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">manageerik.history</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    History
+                </p>
+                <p> Click <strong> 'Create' </strong> to add new historys </p>
+            </field>
+        </record>
+    </data>
+</odoo>

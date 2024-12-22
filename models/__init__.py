@@ -6,3 +6,4 @@ from . import task
 from . import history
 from . import sprint
 from . import techonology
+from . import developer

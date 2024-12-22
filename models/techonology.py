@@ -8,3 +8,4 @@ class techonology(models.Model):
     name = fields.Char(required=True)
     description = fields.Text()
     image = fields.Image()
+    tasks = fields.Many2many("manageerik.task", string="Tasks", relation = "techs_tasks", column1 = "tasks", column2 = "technologies")
